@@ -1,0 +1,23 @@
+<title>Wechat X5 Jump Test</title>
+<a>URL1</a>
+<input id="url1"></input>
+<br>
+<a>URL2</a>
+<input id="url2"></input>
+<br>
+<button id="showl" onclick="show_link()">📖Show Link</button>
+<button id="cl" onclick="clean()">🚮Clean input</button>
+<h1 id="show" ></h1>
+<script>
+    function show_link(){
+        var url = window.location.href;
+        var showid = document.getElementById("show");
+        var url1id =document.getElementsByTagName("input")[0].value;
+        var url2id =document.getElementsByTagName("input")[1].value;
+        showid.innerHTML=url+"?url1="+url1id+"&url2="+url2id;
+        var urlfinal=url+"?url1="+url1id+"&url2="+url2id;
+    }
+    function clean(){
+        location.reload();
+    }
+</script>
